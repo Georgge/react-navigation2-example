@@ -15,7 +15,7 @@ class SettingsScreen extends Component {
 
   signOut = async () => {
     const { navigation } = this.props;
-    AsyncStorage.clear();
+    await AsyncStorage.clear();
     navigation.navigate('AuthLoading');
   }
 
@@ -23,7 +23,9 @@ class SettingsScreen extends Component {
     return (
       <View>
         <Button title="Sign Out"
-          onPress={() => {this.signOut()}}
+          onPress={() => {
+            this.signOut()
+          }}
         />
       </View>
     );

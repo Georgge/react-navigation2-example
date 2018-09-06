@@ -22,6 +22,12 @@ const AuthStackNavigator = createStackNavigator({
   Welcome: WelcomeScreen,
   SignIn: SignInScreen,
   SignUp: SignUpScreen,
+}, {
+  navigationOptions: {
+    headerStyle: {
+      backgroundColor: '#264e86'
+    }
+  }
 });
 
 const AppTabNavigator = createMaterialBottomTabNavigator({
@@ -49,6 +55,12 @@ const AppStackNavigator = createStackNavigator({
         </TouchableOpacity>
       )
     })
+  }
+}, {
+  navigationOptions: {
+    headerStyle: {
+      backgroundColor: '#0074e4'
+    }
   }
 });
 
